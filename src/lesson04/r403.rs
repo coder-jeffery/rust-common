@@ -2,6 +2,7 @@
 //结构体 + Enum + Match
 
 mod utils;
+use rand::Rng;
 use utils::hello;
 
 enum Message{
@@ -51,4 +52,8 @@ fn main(){
     user.send_msg(Message::Quit);
 
     hello();
+
+    //引入第三方库
+    let n = rand::thread_rng().gen_range(1, 100);
+    println!("random: {}", n);
 }
