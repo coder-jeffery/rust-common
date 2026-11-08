@@ -1,6 +1,9 @@
 
 //结构体 + Enum + Match
 
+mod utils;
+use utils::hello;
+
 enum Message{
     Quit,
     Move {x:i32, y:i32},
@@ -36,10 +39,6 @@ impl User{
     }
 }
 
-struct IpAddr{
-    //
-    
-}
 
 fn main(){
 
@@ -50,4 +49,6 @@ fn main(){
     user.send_msg(Message::Write("hello world".to_string()));
     user.send_msg(Message::ChangeColor(255, 0, 0));
     user.send_msg(Message::Quit);
+
+    hello();
 }
