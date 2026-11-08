@@ -36,12 +36,18 @@ impl User{
     }
 }
 
+struct IpAddr{
+    //
+    
+}
+
 fn main(){
 
     let user = User::new(1001, "jeff");
 
-    user.send_msg(Message::Quit);
+    
     user.send_msg(Message::Move { x: 10, y: 20 });
     user.send_msg(Message::Write("hello world".to_string()));
     user.send_msg(Message::ChangeColor(255, 0, 0));
+    user.send_msg(Message::Quit);
 }
