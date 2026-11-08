@@ -11,6 +11,17 @@ Rust所有权 OwnerShip
 3. 值不能同时有多个所有者
 */
 
+// #[derive(Debug)]
+// struct User {
+//     name: String,
+//     age: i32,
+// }
+
+// let u = User {
+//     name:  String::from("jeff"),
+//     age: 14,
+// };
+
 
 
 /*
@@ -22,7 +33,6 @@ Rust所有权 OwnerShip
 fn print(s: &String){
     println!("{}", s);
 }
-
 
 
 
@@ -45,11 +55,11 @@ fn main(){
     let s2 = s1;
     println!("{}", s2); //打印s1报错
 
-    print(&s2);
+    print(&s2); //切片 &[T]
 
     //  切片
     let arr = [1,2,3,4,5];
-    let slice = &arr[1..3];
+    let slice: &[i32] = &arr[1..3];
 
     println!("{:?}", slice);
 
@@ -57,4 +67,9 @@ fn main(){
     for v in slice{
         println!("{}", v);
     }
+
+
+    // println!("{}", u);
+
 }
+
