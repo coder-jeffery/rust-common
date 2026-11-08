@@ -1,1 +1,1 @@
-/Users/jeffery/Documents/workspace/rust/rust-demo/target/release/rust-demo: /Users/jeffery/Documents/workspace/rust/rust-demo/src/main.rs
+/Users/jeffery/workspace/rust/rust-learning/target/release/rust-demo: /Users/jeffery/workspace/rust/rust-learning/src/main.rs

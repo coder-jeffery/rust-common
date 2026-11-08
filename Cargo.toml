@@ -6,3 +6,17 @@ edition = "2024"
 [dependencies]
 rand = "0.7.0"   
 
+
+[[bin]]
+name = "case02"
+path = "src/lesson02/case02.rs"
+
+[[bin]]
+name = "case01"
+path = "src/lesson01/case01.rs"
+
+
+[[bin]]
+name ="less04"
+path ="src/lesson04/r401.rs"
+
