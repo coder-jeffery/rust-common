@@ -1,15 +1,11 @@
-# rust_learning
-rust_learning
+# rust-common
 
-cargo new hello
+Rust 学习与示例代码。
 
-cd hell
-
-cargo run 
+```bash
+cargo run
 cargo build
-
 cargo build --release
--- 格式化
 cargo fmt
-
 cargo clippy
+```
