@@ -7,6 +7,7 @@ edition = "2024"
 rand = "0.7.0"   
 
 
+
 [[bin]]
 name = "case02"
 path = "src/lesson02/case02.rs"
@@ -17,6 +18,5 @@ path = "src/lesson01/case01.rs"
 
 
 [[bin]]
-name ="less04"
-path ="src/lesson04/r401.rs"
-
+name ="case03"
+path ="src/lesson04/r403.rs"

@@ -41,6 +41,36 @@ impl User{
 }
 
 
+//枚举
+// #[derive(Debug)]
+// enum IpAddr{
+//     V4(u8,u8,u8,u8),
+//     V6(String),
+// }
+
+
+enum Status{
+    Ok,
+    Err(String),
+}
+
+impl Status{
+    fn is_ok(&self) -> bool{
+        match self {
+            Status::Ok => true,
+            Status::Err(_) => false,
+        }
+    }
+
+    fn error_msg(&self)->Option<&str>{
+        match self {
+            Status::Err(msg) => Some(msg),
+            Status::Ok => None,
+        }
+    }
+}
+
+
 fn main(){
 
     let user = User::new(1001, "jeff");
@@ -56,4 +86,18 @@ fn main(){
     //引入第三方库
     let n = rand::thread_rng().gen_range(1, 100);
     println!("random: {}", n);
+
+    // let v4 = IpAddr::V4(127, 0, 0, 1);
+    // let v6 = IpAddr::V6("::1".to_string());
+    // println!("{:?}, {:?}", v4, v6);
+
+    let res = Status::Ok;
+    println!("{}", res.is_ok());
+
+    let res2 = Status::Err("this is error message".to_string());
+    if let Some(e) = res2.error_msg(){
+        println!("error: {}", e);
+    }
+
+
 }
