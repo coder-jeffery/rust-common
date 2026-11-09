@@ -5,6 +5,8 @@ mod utils;
 use rand::Rng;
 use utils::hello;
 
+use crate::Status::Err;
+
 enum Message{
     Quit,
     Move {x:i32, y:i32},
@@ -98,6 +100,14 @@ fn main(){
     if let Some(e) = res2.error_msg(){
         println!("error: {}", e);
     }
+
+    //采用Result
+    // let r: Result<(), String> = Err("oop".to_string());
+    // if let Err(e) = r{
+    //     println!("error : {e}");
+    // }
+
+    
 
 
 }

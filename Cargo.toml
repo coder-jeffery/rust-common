@@ -20,3 +20,7 @@ path = "src/lesson01/case01.rs"
 [[bin]]
 name ="case03"
 path ="src/lesson04/r403.rs"
+
+[[bin]]
+name ="case04"
+path ="src/lesson05/string_test.rs"
